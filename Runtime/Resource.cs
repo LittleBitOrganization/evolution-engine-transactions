@@ -1,12 +1,11 @@
 using UnityEngine;
 using UnityEngine.Events;
 
+[System.Serializable]
 public class Resource
 {
-    public UnityEvent<float> onChanged;
     public Resource(string id)
     {
-        onChanged = new UnityEvent<float>();
         Id = id;
     }
 
@@ -17,7 +16,6 @@ public class Resource
         {
             _value = value;
             if (_value < 0) _value = 0;
-            onChanged?.Invoke(_value);
         }
     }
 
