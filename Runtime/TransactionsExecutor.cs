@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using LittleBit.Modules.CoreModule;
 using UnityEngine;
 using UnityEngine.Events;
 using Object = System.Object;
@@ -74,11 +75,3 @@ public class TransactionsExecutor
         return _dataStorageService.GetData<Resource>(resourceId);
     }
 }
-
-// public interface IDataStorageService : IService
-// {
-//     public T GetData<T>(string key);
-//     public void SetData<T>(string key, T data);
-//     public void AddUpdateDataListener(string key, Action onUpdateData);
-//     public void RemoveUpdateDataListener(string key, Action onUpdateData);
-// }
