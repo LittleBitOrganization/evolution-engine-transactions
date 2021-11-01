@@ -66,6 +66,7 @@ public class TransactionsExecutor
         transaction.TransactionResult = Transaction.Result.Success;
         transaction.ExecutedTimeStamp = DateTime.Now.ToString();
 
+        _dataStorageService.SetData(transaction.ResourceId, resource);
         return;
     }
 

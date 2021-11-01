@@ -7,7 +7,7 @@ public class Transaction
     public readonly string ResourceId;
     public readonly string Message;
     public readonly Type TransactionType;
-    public readonly float Value;
+    public readonly double Value;
     public string SendedTimeStamp;
     public string ExecutedTimeStamp;
     public Result TransactionResult;
@@ -26,7 +26,7 @@ public class Transaction
         Fail
     }
 
-    public Transaction(string id, string resourceId, float value, Type type, string message)
+    public Transaction(string id, string resourceId, double value, Type type, string message)
     {
         Value = value;
         TransactionType = type;

@@ -10,7 +10,7 @@ public class Resource : Data
         Id = id;
     }
 
-    public float Value
+    public double Value
     {
         get => _value;
         set
@@ -20,7 +20,7 @@ public class Resource : Data
         }
     }
 
-    private float _value;
+    private double _value;
 
     public readonly string Id;
 
