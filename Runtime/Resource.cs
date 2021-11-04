@@ -10,17 +10,7 @@ public class Resource : Data
         Id = id;
     }
 
-    public double Value
-    {
-        get => _value;
-        set
-        {
-            _value = value;
-            if (_value < 0) _value = 0;
-        }
-    }
-
-    private double _value;
+    public double Value;
 
     public readonly string Id;
 
