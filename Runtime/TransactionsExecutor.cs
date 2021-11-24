@@ -60,8 +60,8 @@ public class TransactionsExecutor
                 break;
         }
 
-        Debug.Log(string.Format("Transaction [Id = '{0}'] was successfully executed!\n Message:{1}", transaction.Id,
-            transaction.Message, transaction.TransactionType));
+        // Debug.Log(string.Format("Transaction [Id = '{0}'] was successfully executed!\n Message:{1}", transaction.Id,
+        //     transaction.Message, transaction.TransactionType));
 
         transaction.TransactionResult = Transaction.Result.Success;
         transaction.ExecutedTimeStamp = DateTime.Now.ToString();
