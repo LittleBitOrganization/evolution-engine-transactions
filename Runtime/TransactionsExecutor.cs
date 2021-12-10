@@ -16,6 +16,8 @@ public class TransactionsExecutor
         SubscribeToTransactionsContainer();
     }
 
+    public event Action<Transaction> onTransactionsExecuted;
+
     private ITransactionsContainer _transactionsContainer;
     private IDataStorageService _dataStorageService;
 
@@ -59,15 +61,13 @@ public class TransactionsExecutor
                 resource.Value /= transaction.Value;
                 break;
         }
-
-        // Debug.Log(string.Format("Transaction [Id = '{0}'] was successfully executed!\n Message:{1}", transaction.Id,
-        //     transaction.Message, transaction.TransactionType));
-
+        
         transaction.TransactionResult = Transaction.Result.Success;
         transaction.ExecutedTimeStamp = DateTime.Now.ToString();
 
         _dataStorageService.SetData(transaction.ResourceId, resource);
-        return;
+        
+        onTransactionsExecuted?.Invoke(transaction);
     }
 
     private Resource FindResourceById(string resourceId)
