@@ -1,13 +1,11 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using LittleBit.Modules.CoreModule;
 using UnityEngine;
-using UnityEngine.Events;
-using Object = System.Object;
+using UnityEngine.Scripting;
 
 public class TransactionsExecutor
 {
+    [Preserve]
     public TransactionsExecutor(ITransactionsContainer container, IDataStorageService dataStorageService)
     {
         _dataStorageService = dataStorageService;

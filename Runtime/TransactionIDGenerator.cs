@@ -5,7 +5,7 @@ public class TransactionIDGenerator : ITransactionIDGenerator
 {
     private const string _rndStringGlyphs = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPRSTUVWXYZ0123456789";
     private int _rndStringGlyphsLength;
-
+    
     public TransactionIDGenerator()
     {
         _rndStringGlyphsLength = _rndStringGlyphs.Length;

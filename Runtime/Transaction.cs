@@ -25,6 +25,7 @@ public class Transaction
         Success,
         Fail
     }
+    
 
     public Transaction(string id, string resourceId, double value, Type type, string message)
     {

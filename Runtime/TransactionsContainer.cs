@@ -1,9 +1,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Scripting;
 
 public class TransactionsContainer : ITransactionsContainer
 {
+    [Preserve]
     public TransactionsContainer()
     {
         _transactions = new Queue<Transaction>();

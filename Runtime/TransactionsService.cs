@@ -1,8 +1,6 @@
 using System;
 using System.Collections.Generic;
-using System.Text;
-using UnityEngine;
-using Random = UnityEngine.Random;
+using UnityEngine.Scripting;
 
 public class TransactionsService : ITransactionsService
 {
@@ -12,6 +10,7 @@ public class TransactionsService : ITransactionsService
     private const int _idLength = 16;
     private TransactionIDGenerator _transactionIdGenerator;
 
+    [Preserve]
     public TransactionsService(ITransactionsContainer container)
     {
         _transactionsContainer = container;
