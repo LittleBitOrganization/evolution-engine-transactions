@@ -12,7 +12,7 @@ public class Resource : Data
 
     public double Value;
 
-    public readonly string Id;
+    public string Id;
 
     public Resource()
     {
